@@ -7,8 +7,12 @@
 ####
 
 team_name = 'Dex&Fred' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+strategy_name = 'Use early history'
+strategy_description = '''\
+Collude first round. Compare all rounds to the previous round and 
+assume opponent will behave the same as the first time the previous 
+round's result occurred. If the previous round's result never has 
+happened, collude except after being severly punished.'''
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
