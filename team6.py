@@ -7,15 +7,18 @@
 ####
 
 team_name = 'Cube' # Only 10 chars displayed.
-strategy_name = 'nameo'
-strategy_description = 'How does this strategy decide?'
+strategy_name = 'Use early history'
+strategy_description = '''\
     
 def move(my_history, their_history, my_score, their_score):
-    ''' Arguments accepted: my_history, their_history are strings.
-    my_score, their_score are ints.
+    '''Make my move based on the history with this player.
     
-    Make my move.
-    Returns 'c' or 'b'. 
+    history: a string with one letter (c or b) per round that has been played with this opponent.
+    their_history: a string of the same length as history, possibly empty.
+    The first round between these two players is my_histoy[0] and their_history[0]
+    The most recent round is my_history[-1] and their_history[-1]
+    
+    Returns 'c' or 'b' for collude or betray.
     '''
 
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
